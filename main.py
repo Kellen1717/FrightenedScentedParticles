@@ -2,7 +2,7 @@
 
 
 
-class ariplane:
+class airplane:
 
 
 
@@ -25,10 +25,10 @@ class ariplane:
     self.speed += speedChange  
    
     self.curentfule -= 50
-    if self.curentfule <= 0
+    if self.curentfule <= 0:
       return -1
     
-    if self.speed >= self.speedLimit
+    if self.speed >= self.speedLimit:
       return -2
 
     return self.speed
@@ -42,12 +42,17 @@ class ariplane:
   def winglights(self):
     print ("the wing lights are on")
 
-print ("welcome to the airplane factory ")
-Planemodle=input ("what type of plane do you want ")
-Planewingspan=input ("what would you like you wingspan to be ")
-seats=input ("how many seats so do you want ")
-enginsize=input ("how big do you want your engine to be")
-newPlane=airplane(Planemodle,Planewingspan,seats,enginsize)
+
+
+while True:
+  print ("welcome to the airplane factory ")
+  Planemodle=input ("what type of plane do you want ")
+  Planewingspan=input ("what would you like you wingspan to be ")
+  seats=input ("how many seats so do you want ")
+  enginsize=input ("how big do you want your engine to be ")
+  newPlane=airplane(Planemodle,Planewingspan,seats,enginsize)
+
+  print("you have a brand new " +newPlane.color+ " plane")
 
 
 #return new speed if successful 
